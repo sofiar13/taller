@@ -15,25 +15,12 @@ function showAlertError() {
     }, 2000);
 }
 
-/*
-function comparePass(){
-    const pass1 = document.getElementById("password1");
-    const pass2 = document.getElementById("password2");
-
-    if (pass1.value !== pass2.value){
-        pass1.setCustomValidity("passwords no coinciden")
-        pass2.setCustomValidity("passwords no coinciden")
-    } else {
-        pass1.setCustomValidity("")
-        pass2.setCustomValidity("")
-    }
-}*/
 
 document.getElementById('form').addEventListener('submit', (e) =>{
     const pass1 = document.getElementById("password1");
     const pass2 = document.getElementById("password2");
     e.preventDefault()
-    if (pass1.value !== pass2.value || pass1.value.length < 5) {
+    if (pass1.value !== pass2.value || pass1.value.length < 6) {
         showAlertError();
     } else {
         showAlertSuccess();
