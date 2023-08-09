@@ -1,3 +1,4 @@
+
 function showAlertSuccess() {
     document.getElementById("alert-success").classList.add("show");
     let tiempoFuera = setTimeout(()=>{
@@ -14,7 +15,7 @@ function showAlertError() {
     }, 2000);
 }
 
-
+/*
 function comparePass(){
     const pass1 = document.getElementById("password1");
     const pass2 = document.getElementById("password2");
@@ -26,7 +27,15 @@ function comparePass(){
         pass1.setCustomValidity("")
         pass2.setCustomValidity("")
     }
-}
+}*/
 
-
-
+document.getElementById('form').addEventListener('submit', (e) =>{
+    const pass1 = document.getElementById("password1");
+    const pass2 = document.getElementById("password2");
+    e.preventDefault()
+    if (pass1.value !== pass2.value || pass1.value.length < 5) {
+        showAlertError();
+    } else {
+        showAlertSuccess();
+    }
+})
