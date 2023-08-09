@@ -3,7 +3,7 @@ function showAlertSuccess() {
     let tiempoFuera = setTimeout(()=>{
         document.getElementById("alert-success").classList.remove("show");
         clearTimeout(tiempoFuera);
-    }, 500);
+    }, 2000);
 }
 
 function showAlertError() {
@@ -11,5 +11,5 @@ function showAlertError() {
     let tiempoFuera = setTimeout(()=>{
         document.getElementById("alert-danger").classList.remove("show");
         clearTimeout(tiempoFuera);
-    }, 500);
+    }, 2000);
 }
